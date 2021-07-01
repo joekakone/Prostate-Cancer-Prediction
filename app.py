@@ -19,14 +19,14 @@ with open("model.pkl", "rb") as f:
 
 
 inputs = [
-    gr.inputs.Number(label="Radius"),
-    gr.inputs.Slider(minimum=0, maximum=100, step=None, label="Texture"),
-    gr.inputs.Number(label="Perimeter"),
-    gr.inputs.Number(label="Area"),
-    gr.inputs.Number(label="Smoothness"),
-    gr.inputs.Number(label="Compactness"),
-    gr.inputs.Slider(minimum=0, maximum=100, step=None, label="Symmetry"),
-    gr.inputs.Number(label="Fractal dimension")
+    gr.inputs.Slider(minimum=9, maximum=25, step=None, label="Radius"),
+    gr.inputs.Slider(minimum=11, maximum=27, step=None, label="Texture"),
+    gr.inputs.Slider(minimum=52, maximum=172, step=None, label="Perimeter"),
+    gr.inputs.Slider(minimum=202, maximum=1878, step=None, label="Area"),
+    gr.inputs.Slider(minimum=0.070, maximum=0.143, step=None, label="Smoothness"),
+    gr.inputs.Slider(minimum=0.038, maximum=0.345, step=None, label="Compactness"),
+    gr.inputs.Slider(minimum=0.135, maximum=0.304, step=None, label="Symmetry"),
+    gr.inputs.Slider(minimum=0.053, maximum=0.097, step=0.001, label="Fractal dimension"),
 ]
 
 output = gr.outputs.Label(label="Diagnosis")
